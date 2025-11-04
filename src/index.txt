@@ -1,0 +1,8 @@
+Java features:
+Simple:Java was designed  to be easy for the professional programmer to learn and use effectively.
+Object Oriented Programming Language: Java everything is an Object.
+Architectural neutral. A central issue for the Java designers was that of code longevity and portability.
+Multithreaded; java allows you to write programs that do many things simultaneously.
+Robust,The multi platform environment  of the web places extraordinary demand on the program, because the program must execute reliably in a variety of systems.
+Distributed;Java is designed for the distributed environment of the Internet because it handles TCP/IP protocols
+Dynamic,small fragments of bytecode may be dynamically updated on a running system.
