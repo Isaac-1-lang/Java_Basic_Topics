@@ -31,6 +31,32 @@ class Person {
         persons.add(p5);
         persons.add(p6);
         Collections.sort(persons,new AgeComparator());
+        Queue<Person> queue = new LinkedList<Person>();
+        queue.add(p1);
+        queue.add(p2);
+        queue.add(p3);
+        queue.add(p4);
+        queue.add(p5);
+        queue.add(p6);
+        queue.remove(); // This one is for removing the first element as first in first out in the queue
+        while (!queue.isEmpty()) {
+            Person p = queue.poll();
+            System.out.println(p.name);
+        }
+        Stack<Person> stack = new Stack<Person>();
+        stack.push(p1);
+        stack.push(p2);
+        stack.push(p3);
+        stack.push(p4);
+        stack.push(p5);
+
+
+        stack.push(p6);
+
+        stack.pop(); // This one removes the last element as in the atack Last In First Out.
+
+
+        persons.stream().filter(person->p1.age>23).forEach(System.out::println);
 
 
 
