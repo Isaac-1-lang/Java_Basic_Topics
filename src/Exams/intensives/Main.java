@@ -1,5 +1,8 @@
 package Exams.intensives;
 
+import java.util.HashMap;
+import java.util.Map;
+
 interface Animal {
     String makeSound();
 }
@@ -34,6 +37,15 @@ public class Main {
 
         sp1.print(d1);
         sp2.print(c1);
+
+
+        HashMap<Integer,String> map = new HashMap<>();
+        map.put(0,"Dog");
+        map.put(1,"Cat");
+        for(Map.Entry<Integer,String> entry:map.entrySet()) {
+            System.out.println(entry.getKey());
+            System.out.println(entry.getValue());
+        }
 
 
     }
