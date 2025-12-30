@@ -19,8 +19,8 @@ class Person {
     public static void main(String[] args) {
         List<Person> persons = new ArrayList<>();
         Person p1 = new Person("Isaac",12, Gender.MALE);
-        Person p2 = new Person("Precieux",14, Gender.MALE);
-        Person p3 = new Person("Manzi",15, Gender.MALE);
+        Person p2 = new Person("Amandine",14, Gender.MALE);
+        Person p3 = new Person("Kaneza",15, Gender.MALE);
         Person p4 = new Person("Emmanuel",16, Gender.MALE);
         Person p5 = new Person("Aloys",32, Gender.MALE);
         Person p6 = new Person("Louis",10, Gender.MALE);
@@ -112,6 +112,10 @@ class Person {
     public boolean equals(Object o) {
         Person p1 = (Person) o;
         return age == p1.age && name.equals(p1.name);
+    }
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, age);
     }
 
 }
