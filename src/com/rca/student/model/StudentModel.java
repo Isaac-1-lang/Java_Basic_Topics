@@ -29,9 +29,9 @@ public class StudentModel {
 
     /**
      *  Constructs a new {@code StudentModel} with the specified details
-     * @param firstName the first name of the s
-     * @param lastName
-     * @param age
+     * @param firstName the first name of the student
+     * @param lastName the last name of the student
+     * @param age the age of the student.
      */
     public StudentModel(String firstName, String lastName, int age) {
         this.firstName = firstName;
@@ -51,7 +51,6 @@ public class StudentModel {
      * Setter of the first name of the student
      * @param firstName
      */
-
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
