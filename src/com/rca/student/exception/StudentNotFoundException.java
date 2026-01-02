@@ -14,6 +14,10 @@ package com.rca.student.exception;
  * @see com.rca.student.service.StudentService
  */
 
+/*
+@see helps to add references to the related documentation in the generated Java doc, helping readers navigate to the related classes,methods or external resources
+ */
+
 public class StudentNotFoundException extends RuntimeException {
     /**
      * Constructs a new {@code StudentNotFoundException} with no details message

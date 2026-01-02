@@ -15,6 +15,10 @@ package com.rca.student.model;
 
 public class StudentModel {
     /**
+     * Id of the student
+     */
+    private int id;
+    /**
      * First name of the student
      */
     private String firstName;
@@ -33,10 +37,11 @@ public class StudentModel {
      * @param lastName the last name of the student
      * @param age the age of the student.
      */
-    public StudentModel(String firstName, String lastName, int age) {
+    public StudentModel(String firstName, String lastName, int age,int id) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
+        this.id=id;
     }
 
     /**
@@ -90,9 +95,20 @@ public class StudentModel {
     }
 
     /**
-     * Well formatted output.
+     *
      * @return
      */
+    public int getId() {
+        return id;
+    }
+
+    /**
+     * get the id of the student
+     * @param id
+     */
+    public void setId(int id) {
+        this.id = id;
+    }
     public String toString(){
         return firstName+" "+lastName+" "+age;
     }
