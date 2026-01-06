@@ -30,7 +30,7 @@ public class StudentService {
      * Adds a new student to the system
      *
      *
-     * @params student the {@link  StudentModel} object representing the student to add
+     * @param student the {@link  StudentModel} object representing the student to add
      * @throws IllegalArgumentException if the student is null
      */
 
@@ -59,7 +59,7 @@ public class StudentService {
     /**
      * Removes a student from the system by their ID
      *
-     * @params id the unique identifier of the student to remove
+     * @param id the unique identifier of the student to remove
      * @throws StudentNotFoundException if no student with the given ID exists
      * @see #findStudentById(int)
      */
@@ -79,5 +79,30 @@ public class StudentService {
     public List<StudentModel> getAllStudents() {
         return new ArrayList<>(students);
     }
+
+    /**
+     * Finds a student by their first and last name.
+     *
+     * <p>
+     * This method is deprecated because searching by ID or email is preferred
+     * for uniqueness and performance.
+     * </p>
+     *
+     * @param firstName the first name of the student
+     * @param lastName  the last name of the student
+     * @return the {@link com.rca.student.model.StudentModel} object matching the name
+     * @throws com.rca.student.exception.StudentNotFoundException if no student is found
+     * @deprecated Use {@link #findStudentById(int)} instead.
+     */
+    @Deprecated
+    public StudentModel findStudentByName(String firstName, String lastName) {
+        return students.stream()
+                .filter(s -> s.getFirstName().equalsIgnoreCase(firstName)
+                        && s.getLastName().equalsIgnoreCase(lastName))
+                .findFirst()
+                .orElseThrow(() -> new StudentNotFoundException(
+                        "Student " + firstName + " " + lastName + " not found"));
+    }
+
 
 }
