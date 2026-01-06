@@ -36,6 +36,7 @@ public class StudentModel {
      * @param firstName the first name of the student
      * @param lastName the last name of the student
      * @param age the age of the student.
+     * @param id the unique identifier of the student
      */
     public StudentModel(String firstName, String lastName, int age,int id) {
         this.firstName = firstName;
@@ -46,7 +47,7 @@ public class StudentModel {
 
     /**
      * Getter of the firstname of the student
-     * @return
+     * @return the first name of the student
      */
     public String getFirstName() {
         return firstName;
@@ -54,7 +55,7 @@ public class StudentModel {
 
     /**
      * Setter of the first name of the student
-     * @param firstName
+     * @param firstName the new first name of the student
      */
     public void setFirstName(String firstName) {
         this.firstName = firstName;
@@ -62,7 +63,7 @@ public class StudentModel {
 
     /**
      * Getting the last name of the student
-     * @return
+     * @return the last name of the student
      */
     public String getLastName() {
         return lastName;
@@ -70,7 +71,7 @@ public class StudentModel {
 
     /**
      * Setting the last name of the student
-     * @param lastName
+     * @param lastName the new last name of the student
      */
     public void setLastName(String lastName) {
         this.lastName = lastName;
@@ -78,7 +79,7 @@ public class StudentModel {
 
     /**
      * Getting the age of the student
-     * @return
+     * @return the age of the student
      */
 
     public int getAge() {
@@ -87,7 +88,7 @@ public class StudentModel {
 
     /**
      * Setting the age of the student
-     * @param age
+     * @param age the new age of the student
      */
 
     public void setAge(int age) {
@@ -95,16 +96,17 @@ public class StudentModel {
     }
 
     /**
+     * Gets the unique identifier of the student.
      *
-     * @return
+     * @return the student's ID
      */
     public int getId() {
         return id;
     }
 
     /**
-     * get the id of the student
-     * @param id
+     * Sets the unique identifier of the student.
+     * @param id the new ID of the student
      */
     public void setId(int id) {
         this.id = id;
